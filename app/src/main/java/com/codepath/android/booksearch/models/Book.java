@@ -5,13 +5,22 @@ import android.text.TextUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 
+@Parcel
 public class Book {
-    private String openLibraryId;
-    private String author;
-    private String title;
+
+    // Public so they can be parceled
+    public String openLibraryId;
+    public String author;
+    public String title;
+
+    // For Parcel library
+    public Book() {
+
+    }
 
     public String getOpenLibraryId() {
         return openLibraryId;
